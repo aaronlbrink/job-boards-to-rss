@@ -1,0 +1,7 @@
+api_definitions.json
+boards.json
+criteria.json
+__pycache__
+venv
+*.rss
+*.xml
