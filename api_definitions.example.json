@@ -1,0 +1,48 @@
+
+{
+  "common-job-board-api-1": {
+    "request": {
+      "type": "get"
+    },
+    "response": {
+      "root": "jobs",
+      "job_format": {
+        "title": "title",
+        "url": "absolute_url",
+        "description": "content",
+        "location": "location.name"
+      }
+    }
+  },
+  "company-1": {
+    "request": {
+      "type": "post",
+      "headers": {
+        "x-csrf-token": "x"
+      },
+      "body": {
+        "type": "raw",
+        "content": {
+          "limit": 30,
+          "page": 0,
+          "params": {
+            "location": [
+              "New York, NY"
+            ]
+          }
+        }
+      }
+    },
+    "response": {
+      "root": "data.set.results",
+      "job_format": {
+        "title": "title",
+        "url": "url_name",
+        "description": "description",
+        "location": "loc.places",
+        "created_at": "created",
+        "updated_at": "updated"
+      }
+    }
+  }
+}

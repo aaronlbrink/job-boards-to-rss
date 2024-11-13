@@ -1,0 +1,9 @@
+# Job Boards to RSS
+This python script fetches jobs from company job boards, filters them to your search criteria, and generates an RSS feed of your job matches.
+
+## Installation
+
+```
+pip install -r requirements.txt
+python main.py
+```

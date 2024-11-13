@@ -1,0 +1,12 @@
+[
+  {
+    "company_name": "Example Company",
+    "adapter": "common-job-board-api-1",
+    "board_uri": "https://example.com/api/job-board-endpoint"
+  },
+  {
+    "company_name": "Another Example Company",
+    "adapter": "common-job-board-api-2",
+    "board_uri": "https://another-example.com/api/job-board-endpoint"
+  }
+]
