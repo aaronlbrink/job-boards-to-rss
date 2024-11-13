@@ -57,6 +57,16 @@ def should_include_job(job: Dict, criteria: Dict) -> Dict[str, any] | bool:
   if not role_match:
     return {"exclude_reason": "role"}
 
+  # Custom filters
+  # job_dump = json.dumps(job)
+  # TODO: Why does this not seem to work?
+
+  for word in title.split(" "):
+    if word.lower() in [term.lower()
+                        for term in criteria["title_blacklist"]] and word.strip():
+      # print(f"Excluding {title} because of word in custom filter: {word}")
+      return {"exclude_reason": "custom_filter"}
+
   # Years of experience check
   years_of_experience = job.get("years_of_experience", None)
   if not years_of_experience:
@@ -117,6 +127,7 @@ def filter_jobs(formatted_jobs: List[Dict],
       "role": 0,
       "unspecified_years_of_experience": 0,
       "years_of_experience": 0,
+      "custom_filter": 0,
   }
   for job in formatted_jobs:
     stats["total"] += 1
