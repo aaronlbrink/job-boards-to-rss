@@ -4,6 +4,9 @@ This python script fetches jobs from company job boards, filters them to your se
 ## Installation
 
 ```
+python -m venv env
+source venv/bin/activate
 pip install -r requirements.txt
-python main.py
+pip install -e .
+python -m src.main
 ```

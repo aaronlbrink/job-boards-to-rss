@@ -1,0 +1,6 @@
+{
+  "location_terms": ["new york, ny"],
+  "role_terms": ["creator"],
+  "max_years_of_experience": 3,
+  "title_blacklist": ["product"]
+}

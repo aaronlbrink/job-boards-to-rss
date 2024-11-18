@@ -2,6 +2,14 @@ api_definitions.json
 boards.json
 criteria.json
 __pycache__
+.pytest_cache
 venv
 *.rss
 *.xml
+tests/cases.py
+.DS_Store
+debug.json
+*.egg-info/
+
+# temporarily ignore
+ai.py

@@ -1,4 +1,4 @@
 requests
 feedgenerator
-*.xml
-*.rss
+pytest
+tabulate
